@@ -21,12 +21,12 @@ public class LivroDeBiblioteca extends Livro implements ItemDeBiblioteca {
 
     @Override
     public void Empresta() {
-        this.emprestado = !emprestado;
+        this.emprestado = true;
     }
 
     @Override
     public void Devolve() {
-        this.emprestado = !emprestado;
+        this.emprestado = false;
     }
 
     @Override
