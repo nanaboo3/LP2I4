@@ -22,6 +22,10 @@ public class LivroDeBiblioteca extends Livro implements ItemDeBiblioteca {
         return localizacao;
     }
 
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
+    }
+
     @Override
     public void Empresta() {
         this.emprestado = true;

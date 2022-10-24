@@ -18,13 +18,21 @@ public class FormLivroDeBiblioteca extends JFrame {
     private JButton sairButton;
     private String message = "";
 
-    private LivroDeBiblioteca livro;
+    private LivroDeBiblioteca livro = new LivroDeBiblioteca("Java", "Mauricio", "LTC", (short) 2005, "a1b1");
 
     public FormLivroDeBiblioteca(String titulo) {
         super(titulo);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(panel1);
         this.pack();
+
+        tituloTextField.setText(livro.getTitulo());
+        autorTextField.setText(livro.getAutor());
+        editoraTextField.setText(livro.getEditora());
+        anoEdTextField.setText(String.valueOf(livro.getAnoEdicao()));
+        localTextField.setText(livro.getLocalizacao());
+        statusTextField.setText(String.valueOf(livro.getEmprestado()));
+
         limparButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,13 +48,14 @@ public class FormLivroDeBiblioteca extends JFrame {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String titulo = tituloTextField.getText();
-                String autor = autorTextField.getText();
-                String editora = editoraTextField.getText();
-                short anoEd = Short.parseShort(anoEdTextField.getText());
-                String local = localTextField.getText();
-                //boolean status = Boolean.parseBoolean(statusTextField.getText());
-                livro = new LivroDeBiblioteca(titulo, autor, editora, anoEd, local);
+                livro.setTitulo(tituloTextField.getText());
+                livro.setAutor(autorTextField.getText());
+                livro.setEditora(editoraTextField.getText());
+                livro.setAnoEdicao(Short.parseShort(anoEdTextField.getText()));
+                livro.setLocalizacao(localTextField.getText());
+                livro.setEmprestado(Boolean.parseBoolean(statusTextField.getText()));
+
+
                 limparButton.doClick();
             }
         });
