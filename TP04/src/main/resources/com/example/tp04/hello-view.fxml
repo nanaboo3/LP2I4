@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="309.0" prefWidth="474.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp04.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Pane prefHeight="329.0" prefWidth="479.0">
+      <children>
+         <Label layoutX="92.0" layoutY="15.0" text="Nome:" />
+         <TextField fx:id="pesquisarField" layoutX="143.0" layoutY="11.0" prefHeight="25.0" prefWidth="216.0" />
+          <Button fx:id="pesquisarBtn" layoutX="173.0" layoutY="53.0" onAction="#pesquisarClick" prefHeight="25.0" prefWidth="88.0" text="Pesquisar" />
+         <Label layoutX="21.0" layoutY="126.0" text="Nome:" />
+         <Label layoutX="20.0" layoutY="166.0" text="Salário:" />
+         <Label layoutX="22.0" layoutY="204.0" text="Cargo:" />
+         <TextField fx:id="nomeTextField" layoutX="69.0" layoutY="122.0" prefHeight="17.0" prefWidth="149.0" />
+         <TextField fx:id="salTextField" layoutX="69.0" layoutY="162.0" />
+         <TextField fx:id="cargoTextField" layoutX="69.0" layoutY="200.0" />
+         <Button fx:id="proxBtn" layoutX="218.0" layoutY="262.0" mnemonicParsing="false" onAction="#proxClick" prefHeight="25.0" prefWidth="234.0" text="PRÓXIMO" />
+         <Button fx:id="antBtn" layoutX="-18.0" layoutY="262.0" mnemonicParsing="false" onAction="#antClick" prefHeight="25.0" prefWidth="234.0" text="ANTERIOR" />
+      </children></Pane>
+</VBox>
